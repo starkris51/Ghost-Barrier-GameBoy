@@ -1,0 +1,172 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 1.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000000 L
+  2 _Abletoshoot                                                   0005AE GR
+  2 _AisPressed                                                    0005B1 GR
+  2 _Ammo                                                          0005A2 GR
+  1 _Arrows                                                        0000B6 GR
+    _BGP_REG                                                       ****** GX
+  2 _BackgroundObjects                                             000168 GR
+  2 _BisPressed                                                    0005B2 GR
+  2 _Bullet                                                        0003D8 GR
+  2 _BulletCurrentDirection                                        0005AA GR
+  2 _BulletEffectChecker                                           0005AF GR
+  2 _BulletIsShooting                                              0005AD GR
+  1 _BulletPosition                                                000007 GR
+  0 _CheckIfBulletColliding                                        00227B GR
+  0 _CheckIfEffectsIsOutofScreenX                                  0021AD GR
+  0 _DestroyBigTarget                                              001690 GR
+  0 _DestroyLongTarget                                             0013C4 GR
+  0 _DestroySmallTarget                                            001718 GR
+  0 _DrawWall                                                      001197 GR
+  2 _EffectCurrentY                                                0005A3 GR
+  2 _EffectMoveCheck                                               0005A4 GR
+  2 _EffectMover                                                   0005A5 GR
+  1 _EffectPosition                                                000005 GR
+  2 _EffectYMover                                                  0005A6 GR
+  2 _Font                                                          000238 GR
+  0 _Ghost                                                         000E17 GR
+    _LCDC_REG                                                      ****** GX
+  2 _LevelMap                                                      000000 GR
+  2 _LevelPrepareCountdown                                         0005AB GR
+  0 _LevelTiles                                                    000CB7 GR
+  2 _Levels                                                        0005A1 GR
+  2 _Lives                                                         0005A7 GR
+  0 _MoveBigTarget                                                 001613 GR
+  0 _MoveLongTarget                                                001562 GR
+  1 _MovingObjects                                                 000081 GR
+    _NR10_REG                                                      ****** GX
+    _NR11_REG                                                      ****** GX
+    _NR12_REG                                                      ****** GX
+    _NR13_REG                                                      ****** GX
+    _NR14_REG                                                      ****** GX
+    _NR50_REG                                                      ****** GX
+    _NR51_REG                                                      ****** GX
+    _NR52_REG                                                      ****** GX
+  2 _NextLevelHasStarted                                           0005B0 GR
+  1 _Objects                                                       000009 GR
+  1 _PlayerPosition                                                000001 GR
+  0 _Playerframes                                                  000E97 GR
+  0 _PlayerframesReverse                                           000E9B GR
+  2 _Playerframespeed                                              00059F GR
+  0 _PrepareLevel                                                  001BA1 GR
+  0 _ResetLevel                                                    001A00 GR
+  0 _SetBullets                                                    001B60 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 2.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  0 _SetTargetToHorizontalMove                                     001728 GR
+  0 _SetTargetToVerticalMove                                       0017D0 GR
+  0 _SpawnArrow                                                    001911 GR
+  0 _SpawnBigTarget                                                001449 GR
+  0 _SpawnBullet                                                   002089 GR
+  0 _SpawnEffectsOnBullet                                          00210B GR
+  0 _SpawnLongTarget                                               001240 GR
+  0 _SpawnSmallTarget                                              0016BB GR
+  0 _SpawnSwitch                                                   00187C GR
+  0 _SpawnTallTarget                                               001980 GR
+  0 _SwitchPlayerEyeFrames                                         000F68 GR
+  1 _Switches                                                      0000A4 GR
+  2 _TargetList                                                    0005A9 GR
+  2 _TargetSprites                                                 000408 GR
+  2 _TimerisOn                                                     0005B3 GR
+  0 _UpdateHealth                                                  002003 GR
+  0 _UpdatePlayerAnimation                                         001124 GR
+  0 _UpdateTargetMove                                              0029DA GR
+  1 _VelocityX                                                     000000 GR
+  2 _VelocityY                                                     00059E GR
+    _WX_REG                                                        ****** GX
+    _WY_REG                                                        ****** GX
+  2 _WhatKindofEyeshouldthegoofyahhGhostShowfortheEffectFunction   0005A8 GR
+  2 _WindowMap                                                     0004A8 GR
+  2 _WindowTileset                                                 0004BC GR
+  0 ___str_0                                                       0029C4 R
+  0 ___str_1                                                       002D58 R
+  0 ___str_2                                                       002D5B R
+  7 __xinit__Abletoshoot                                           0005AE R
+  7 __xinit__AisPressed                                            0005B1 R
+  7 __xinit__Ammo                                                  0005A2 R
+  7 __xinit__BackgroundObjects                                     000168 R
+  7 __xinit__BisPressed                                            0005B2 R
+  7 __xinit__Bullet                                                0003D8 R
+  7 __xinit__BulletCurrentDirection                                0005AA R
+  7 __xinit__BulletEffectChecker                                   0005AF R
+  7 __xinit__BulletIsShooting                                      0005AD R
+  7 __xinit__EffectCurrentY                                        0005A3 R
+  7 __xinit__EffectMoveCheck                                       0005A4 R
+  7 __xinit__EffectMover                                           0005A5 R
+  7 __xinit__EffectYMover                                          0005A6 R
+  7 __xinit__Font                                                  000238 R
+  7 __xinit__LevelMap                                              000000 R
+  7 __xinit__LevelPrepareCountdown                                 0005AB R
+  7 __xinit__Levels                                                0005A1 R
+  7 __xinit__Lives                                                 0005A7 R
+  7 __xinit__NextLevelHasStarted                                   0005B0 R
+  7 __xinit__Playerframespeed                                      00059F R
+  7 __xinit__TargetList                                            0005A9 R
+  7 __xinit__TargetSprites                                         000408 R
+  7 __xinit__TimerisOn                                             0005B3 R
+  7 __xinit__VelocityY                                             00059E R
+  7 __xinit__WhatKindofEyeshouldthegoofyahhGhostShowfortheEffect   0005A8 R
+  7 __xinit__WindowMap                                             0004A8 R
+  7 __xinit__WindowTileset                                         0004BC R
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 3.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  7 __xinit__framecounter                                          00059C R
+  7 __xinit__numberspriteList                                      0005B4 R
+  7 __xinit__playerinitloopTiles                                   0005A0 R
+  7 __xinit__switchPlayerFrame                                     00059D R
+  0 _collisionCheck                                                000E9F GR
+  0 _fadein                                                        001022 GR
+  0 _fadeout                                                       000FE3 GR
+  2 _framecounter                                                  00059C GR
+  0 _init                                                          002D6F GR
+    _joypad                                                        ****** GX
+  0 _main                                                          002E23 GR
+  0 _makeSound                                                     001057 GR
+  0 _movePlayer                                                    001093 GR
+  2 _numberspriteList                                              0005B4 GR
+  0 _perfomantdelay                                                000000 GR
+  2 _playerinitloopTiles                                           0005A0 GR
+    _printf                                                        ****** GX
+  0 _removeTargetfromList                                          002064 GR
+    _set_bkg_data                                                  ****** GX
+    _set_bkg_tile_xy                                               ****** GX
+    _set_bkg_tiles                                                 ****** GX
+    _set_sprite_data                                               ****** GX
+    _set_win_tiles                                                 ****** GX
+  0 _setupPlayer                                                   0010C1 GR
+    _shadow_OAM                                                    ****** GX
+  0 _splashscreen                                                  001069 GR
+  0 _switchLevel                                                   001C72 GR
+  2 _switchPlayerFrame                                             00059D GR
+  0 _u3logo                                                        00001F GR
+  0 _u3logoMap                                                     000B4F GR
+    _wait_vbl_done                                                 ****** GX
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 4.
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size   307A   flags    0
+   1 _DATA                                      size     BC   flags    0
+   2 _INITIALIZED                               size    5BE   flags    0
+   3 _DABS                                      size      0   flags    8
+   4 _HOME                                      size      0   flags    0
+   5 _GSINIT                                    size      0   flags    0
+   6 _GSFINAL                                   size      0   flags    0
+   7 _INITIALIZER                               size    5BE   flags    0
+   8 _CABS                                      size      0   flags    8
+
